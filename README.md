@@ -1,1 +1,5 @@
-# Graphing-And-Query-Language-
+# GAQL 
+
+## basic commands:
+
+
