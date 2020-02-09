@@ -17,7 +17,17 @@ class Command:
     
     def config(**configs):
         for item in configs.keys():
-            if item in ["query","function","name","commType"]:
-                
-
-
+            for item in ["query","function","name","commType"]:
+                if item == "query":
+                   self.query = configs.query
+                elif item == "fn":
+                    self.fn = configs.fn
+                elif item == "name":
+                    self.name = configs.name
+                elif item == "commType":
+                    if configs.commType in ["action","getter","setter"]:
+                        self.commType = configs.commType
+                    else:
+                        return "FAIL"
+                else:
+                    return "FAIL"
